@@ -1,0 +1,94 @@
+body{
+  padding-top:125px;
+  background:#f5f5f5 url("../img/bg_pattern.png") repeat; 
+}
+.box-shadow{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.05),
+              0 4px 8px 0 rgba(0,0,0,.05);
+}
+
+@media (max-width:768px){
+  body{ padding-top:0px; }
+  body .fixed-top{ position:relative; }
+  .bg-home-quote .display-4{
+    font-size:2rem;
+  }
+}
+
+.bg_page{
+  background:#f5f5f5;
+  border-bottom:1px solid #eee;
+}
+
+
+.btn-fit{
+  width:fit-content !important;
+}
+
+/* hero */
+.dr-food-1,
+.dr-food-2,
+.dr-food-3 {
+  position: absolute;
+  width: 60%;
+}
+
+.dr-food-1 {
+  top: 0%;
+  left: -5%;
+  animation: anima1 3s infinite ease-in-out;
+}
+.dr-food-2 {
+  top: -42%;
+  right: -5%;
+  animation: anima1 2s infinite ease-in-out;
+}
+.dr-food-3 {
+  bottom: -50%;
+  right: 15px;
+  animation: anima1 4s infinite ease-in-out;
+}
+
+@keyframes anima1 {
+  0% {
+    transform: translateY(0) scale(1); }
+  50% {
+    transform: translateY(-5px) scale(1.05); }
+  0% {
+    transform: translateY(0) scale(1); }
+}
+
+.go-view{
+  content:'';
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  background:rgba(0,0,0, 0.4);
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+
+  transition-duration:0.2s;
+}
+.product-hover:hover .go-view{
+  opacity:1;
+}
+
+#products a:hover span.h5{
+  color:#198754 !important;
+}
+
+/* Fade with Vue JS */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s ease;
+}
+
+.page-enter,
+.page-leave-active{
+  opacity:0;
+  transform: scale(0);
+}

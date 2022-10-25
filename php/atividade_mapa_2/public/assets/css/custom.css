@@ -1,0 +1,51 @@
+body{ background:#f3edf6; }
+
+.logo-img{ max-width:250px;}
+.small-text{ font-size:12px; }
+
+.btn-default-size{ min-width:150px; }
+.lh-0{ line-height:50%; }
+
+.form-label{
+  color:#555;
+  font-size:14px;
+}
+.size-default-box{
+  width:100%;
+  max-width:450px;
+}
+.resize-message{
+  resize:none;
+  min-height:100px !important;
+}
+
+#number_protocol{ padding:1.5rem !important;}
+.circular-button{
+  position:absolute;
+  right:18px;
+  top:14px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+}
+
+.custom-table{
+  border:0px !important;
+  background:#fff !important;
+  color:#666;
+  border-radius:8px;
+  font-size:14px;
+  overflow: hidden;
+}
+
+  .custom-table tr:first-child th{
+    background:#f9f9f9;
+    padding:16px;
+    color:#333;
+    border-color:#ddd !important;
+  }
+  .custom-table tr:last-child td{
+    border-bottom:0px !important;
+  }
+
+  @media print{ .noprint {display:none;} }
