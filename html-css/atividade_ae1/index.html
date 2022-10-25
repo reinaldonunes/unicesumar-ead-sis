@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<head>
+    <title>AE 01 - Reinaldo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <style>
+      *{
+        margin: 0;
+          padding: 0;
+          border: 0;
+          font-size:1em;
+          vertical-align: baseline;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          text-decoration:none;
+          outline: 0;
+          list-style:none;
+
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body{
+        background:#eee;
+      }
+
+      /* RECURSIVOS */
+      .wrapper{
+        margin:0 auto;
+        width:100%;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+        max-width:1400px;
+      }
+      .img-fluid{ width:100%;}
+
+      /* CABEÇALHO */
+      header{
+        background:#fff;
+        padding:32px;
+        margin-bottom:48px;
+        border-bottom-left-radius:30px;
+        border-bottom-right-radius:30px;
+        box-shadow: 0px 0px 100px 15px #ddd;
+      }
+        header .logo{
+          margin:0 auto;
+          margin-bottom:22px;
+          max-width:400px;
+          padding:25px;
+        }
+
+      /* RODAPÉ */  
+
+      footer{
+        background:#222;
+        padding:64px 32px;
+        margin-top:48px;
+        box-shadow: 0px 0px 100px 15px #ddd;
+      }
+
+      footer span{
+        display:block;
+        line-height:130%;
+        text-align:center;
+        color:#fff;
+      }
+      footer span a{ color:rgb(0, 225, 255); }
+
+      /* CONTEÚDO */
+      .module-box{
+        display:flex;
+        flex-direction:column;
+        margin-bottom:56px;
+      }
+
+        .module-name{
+          padding:0px 12px;
+          font-size:25px;
+          font-weight:bold;
+          color:#555;
+          margin-bottom:18px;
+        }
+        
+          .modules-list{
+            width:100%;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+          }
+            .module-item{
+              display:flex;
+              width:33.33%;
+              margin-bottom:18px;
+              padding:12px;
+            }
+              .module-card{
+                flex:1;
+                border-radius:10px;
+                padding:32px;
+                display:flex;
+                flex-direction:column;
+                background:#fff;
+                overflow: hidden;
+
+                position:relative;
+              }
+                .module-card:before{
+                  content:'';
+                  position:absolute;
+                  left:0px;
+                  bottom:0px;
+                  width:0%;
+                  height:8px;
+                  background:#0dcaf0;
+                  display:flex;
+                  opacity:0.3;
+
+                  transition-duration:0.2s;
+                  -o-transition-duration:0.2s;
+                  -moz-transition-duration:0.2s;
+                }
+                .module-card:after{
+                  content:'';
+                  position:absolute;
+                  right:0px;
+                  bottom:0px;
+                  width:0%;
+                  height:8px;
+                  background:#0dcaf0;
+                  display:flex;
+                  opacity:0.3;
+
+                  transition-duration:0.2s;
+                  -o-transition-duration:0.2s;
+                  -moz-transition-duration:0.2s;
+                }
+                .module-card:hover:before,
+                .module-card:hover:after{ width:50%; }
+
+                .module-card > i{
+                  font-size:46px;
+                  margin-bottom:6px;
+                  color:#0d6efd;
+                  transition-duration:0.2s;
+                  -o-transition-duration:0.2s;
+                  -moz-transition-duration:0.2s;
+                }
+                .module-card h6{
+                  color:#0d6efd;
+                  margin-bottom:12px;
+                  transition-duration:0.2s;
+                  -o-transition-duration:0.2s;
+                  -moz-transition-duration:0.2s;
+                }
+                  .module-card:hover h6,
+                  .module-card:hover > i{
+                    color:#0dcaf0;
+                  }
+                  .badge-date{
+                    border-radius:5px;
+                    padding:5px 10px;
+                    background:#ddd;
+                    font-size:12px;
+                    display:flex;
+                    width:fit-content;
+                    font-weight:bold;
+                    color:#555;
+                    margin-bottom:12px;
+                  }
+                  .module-description{ margin-bottom:12px; }
+
+                  .badge-status{
+                    font-size:10px;
+                    padding:8px;
+                    border-radius:5px;
+                    width:fit-content;
+                  }
+                    .status-success{
+                      background:#198754;
+                      color:#fff;
+                    }
+                    .status-progress{
+                      background:#fd7e14;
+                      color:#fff;
+                    }
+
+      @media screen and (max-width:980px){
+        .module-item{ width: 100%; text-align:center; }
+        .badge-date{ margin:0 auto;margin-bottom:12px;}
+        .badge-status{ margin:0 auto; }
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <figure class="logo"><img src="https://www.unicesumar.edu.br/home/assets/img/logo.png" alt="Unicesumar" title="Unicesumar" class="img-fluid" /></figure>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    
+    <section class="module-box">
+      <h1 class="module-name"><i class="bi bi-mortarboard-fill"></i> DISCIPLINAS MÓDULO 51</h1>
+      <ul class="modules-list">
+        <li class="module-item">
+          <div class="module-card">
+            <i class="bi bi-people-fill"></i>
+            <h6>FORMAÇÃO SOCIOCULTURAL E ÉTICA I</h6>
+            <span class="badge-date">21/02/2022</span>
+            <span class="module-description">As relações pessoais são regidas por regras e acordos, e conhecê-las é a melhor forma de estabelecer uma sociedade harmonioza e pacifista.</span>
+            <span class="badge-status status-success"><i class="bi bi-book-fill"></i> CURSADO</span>
+          </div>
+        </li>
+
+        <li class="module-item">
+          <div class="module-card">
+            <i class="bi bi-pc-display"></i>
+            <h6>FUNDAMENTOS DE REDES E DE COMPUTADORES</h6>
+            <span class="badge-date">21/02/2022</span>
+            <span class="module-description">Compreender a configuração e estrutura de uma rede é fundamental para a eficiênte comunicação entre as máquinas.</span>
+            <span class="badge-status status-success"><i class="bi bi-book-fill"></i> CURSADO</span>
+          </div>
+        </li>
+
+        <li class="module-item">
+          <div class="module-card">
+            <i class="bi bi-circle-square"></i>
+            <h6>DESIGN GRÁFICO</h6>
+            <span class="badge-date">28/03/2022</span>
+            <span class="module-description">Design não é só "arte"; é também conceito, forma, textura e sentido. O Design comunica algo e para alguém.</span>
+            <span class="badge-status status-success"><i class="bi bi-book-fill"></i> CURSADO</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="module-box">
+      <h1 class="module-name"><i class="bi bi-mortarboard-fill"></i> DISCIPLINAS MÓDULO 52</h1>
+      <ul class="modules-list">
+        <li class="module-item">
+          <div class="module-card">
+            <i class="bi bi-bar-chart-steps"></i>
+            <h6>ESTRUTURA DE DADOS I</h6>
+            <span class="badge-date">02/05/2022</span>
+            <span class="module-description">Como os programas executam os códigos e qual a lógica por trás de cada um?</span>
+            <span class="badge-status status-progress"><i class="bi bi-book-fill"></i> CURSANDO</span>
+          </div>
+        </li>
+
+        <li class="module-item">
+          <div class="module-card">
+            <i class="bi bi-people-fill"></i>
+            <h6>FORMAÇÃO SOCIOCULTURAL E ÉTICA Ii</h6>
+            <span class="badge-date">02/05/2022</span>
+            <span class="module-description">Continuando os conceitos de FSCE I, vê-se na prática outras definições de sociedade, cultura e ética.</span>
+            <span class="badge-status status-progress"><i class="bi bi-book-fill"></i> CURSANDO</span>
+          </div>
+        </li>
+
+
+        <li class="module-item">
+          <div class="module-card">
+            <i class="bi bi-code-slash"></i>
+            <h6>PROGRAMAÇÃO FRONT END</h6>
+            <span class="badge-date">06/06/2022</span>
+            <span class="module-description">Primeiros passos para criar uma aplicação web completa e client-side.</span>
+            <span class="badge-status status-progress"><i class="bi bi-book-fill"></i> CURSANDO</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+        <span>
+          Feito por <a href="https://github.com/reinaldonunes" target="_blank">Reinaldo José Nunes</a>
+          <br />
+          <strong>RA 21027928-5</strong>
+        </span>        
+    </div>
+  </footer>
+
+</body>
+</html>

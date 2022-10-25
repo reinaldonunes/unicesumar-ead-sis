@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>MAPA REINALDO JOSÉ NUNES - RA ????</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="author" content="Reinaldo José Nunes - RA ???">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+        <style>
+            :root{
+                --bs-primary: #0d6efd;
+                --bs-secondary: #6c757d;
+                --bs-success: #198754;
+                --bs-info: #0dcaf0;
+                --bs-warning: #ffc107;
+                --bs-danger: #dc3545;
+                --bs-light: #f8f9fa;
+                --bs-dark: #212529;
+                --bs-primary-rgb: 13,110,253;
+                --bs-secondary-rgb: 108,117,125;
+                --bs-success-rgb: 25,135,84;
+                --bs-info-rgb: 13,202,240;
+                --bs-warning-rgb: 255,193,7;
+                --bs-danger-rgb: 220,53,69;
+                --bs-light-rgb: 248,249,250;
+                --bs-dark-rgb: 33,37,41;
+                --bs-white-rgb: 255,255,255;
+                --bs-black-rgb: 0,0,0;
+                --bs-body-color-rgb: 33,37,41;
+                --bs-body-bg-rgb: 255,255,255;
+            }
+
+            *{
+                padding:0;
+                margin:0;
+                line-height:100%;
+                font-size:1rem;
+                vertical-align: baseline;
+                box-sizing: border-box;
+                font-family:'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            body{ overflow:hidden; }
+
+            
+
+            /* Default */
+            .flex{ display:flex; }
+            .flex-col{ flex-direction:column; }
+            .flex-row{ flex-direction:row;}
+            .flex-wrap{ flex-wrap:wrap;}
+            .justify-between{ justify-content: space-between; }
+            .items-center{ align-items:center; }
+            .text-center{ text-align:center; }
+
+
+            .row{ display:flex; flex:1;}
+            .col,
+            .col-4,
+            .col-6,
+            .col-12{ display:flex; padding:2rem; width:auto;}
+                .col-4{ width:33.33%;}
+                .col-6{ width:50%; }
+                .col,
+                .col-12{ width:100%; }
+
+            .container{ max-width: 1140px; }
+
+            .mt-1{ margin-top:1rem; }
+            .mb-1{ margin-bottom:1rem; }
+
+            .btn{
+                display:inline-flex;
+                margin:0.1rem;
+                padding:1rem 1.2rem;
+                background:none;
+                border-radius:6px;
+                cursor: pointer;
+                font-size:0.9rem;
+                font-weight:600;
+                border:0px;
+                outline-color:transparent;
+                outline-width: 4px;
+                outline-style: solid;
+                width:fit-content;
+                justify-content: center;
+                
+                transition-duration:0.2s;
+            }   
+                .btn-primary{
+                    background:#712cf9;
+                    color:#fff;
+                }
+                .btn-primary:focus{ outline-color:#702cf986; }
+
+                .btn-secondary{
+                    margin:0 auto;
+                    background:#2c5cf9;
+                    color:#fff;
+                }
+                    .btn-secondary:focus{ outline-color:#2c5cf986; }
+
+                .btn-confirm{
+                    padding:8px 16px;
+                }
+
+
+            .h-1{ font-size: 4rem; font-weight:600; }
+            .h-4{ font-size: 2.5rem; font-weight:600; }
+            .h-6{ font-size: 1.7rem; font-weight:600; }
+
+            .lead{ font-size: 1.5rem; }
+            .text-md{ font-size: 1.3rem; }
+            .text-sm{ font-size:1rem; }
+
+            .txt_black{ color: #212529;}
+            .txt_semiblack{ color: #495057; }
+            .txt_white{ color: #fff; }
+
+            .debug{ border:1px solid gray; }
+
+            .bg-draft{
+                background:#eee;
+                padding:16px;
+                margin-top:12px;
+            }
+
+            .form-draft{ margin-top:6px; }
+
+            fieldset{ border:0px; }
+
+            .label-draft{
+                display:flex;
+                flex-direction:column;
+                margin-bottom:0.5rem;
+            }
+
+
+            .pd{ padding: 3rem; }
+       
+
+            .form-data{
+                border-radius:8px;
+                background:#fff;
+
+            }
+
+            .form-label{
+                display:flex;
+                flex-direction:column;
+                margin-bottom:1rem;
+            }
+                .form-label span{
+                    font-size:1rem;
+                    font-weight:500;
+                    color:#212529;
+                    margin-bottom:0.5rem;
+                }
+                    .form-control{
+                        border-radius:5px;
+                        padding:1rem 1rem;
+                        border:1px solid #ccc;
+                    }
+
+                .link-assistent{
+                    text-decoration:none;
+                    margin-top:1.5rem;
+                    font-size:1rem;
+                    color:#495057;
+                }  
+                    .link-assistent:hover{
+                        color:#712cf9;
+                    }
+
+
+
+            /* CONTENTS */
+            .content-data{
+                position:relative;
+                z-index:2;
+                width:100%;
+                justify-content: center;
+            }
+
+                .content-introduce{
+                    text-align:center;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content: center;
+                    align-content: center;
+                }
+
+            .section{
+                display:flex;
+                flex:1;
+                min-height:100vh;
+                justify-content: center;
+                padding:32px;
+            }
+                .bg-one{ background:#fff; }
+                .bg-two{ background: blue; }
+                .bg-three{ background: green; }
+
+
+            .no-padding{ padding: 0rem; }
+
+            .bgImage{
+                position:relative;
+                background: url("http://conselhoreal.com.br/wp-content/uploads/2020/12/Oficina-mecanica-960x740.jpg") no-repeat center center;
+                background-size:cover;
+            }
+                .bgImage:before{
+                    content:'';
+                    position:absolute;
+                    top:0px;
+                    bottom:0px;
+                    left:0px;
+                    right:0px;
+                    background:rgba(0, 7, 46, 0.856);
+                    z-index:1;
+                }
+
+            .w-full{ width: 100%;}
+            .hidden{ display:none; }
+
+            #screen_03{
+                position:relative;
+            }
+            .alert-box{display:none;}
+                .alert-box.pop{
+                    position:absolute;
+                    top:50%;
+                    margin-top:-170px;
+                    z-index:10;
+                    left:calc(50%-(650/2));
+                    width:650px;
+                    height:340;
+                    display:flex;
+                    flex-direction: column;
+                    padding:3rem 2rem;
+                    background:#fff;
+                    box-shadow:0px 0px 15px #ddd;
+                    border-radius:10px;
+                    text-align:center;
+                }
+
+                #screen_03.pop:before{
+                    content:'';
+                    position:absolute;
+                    top:0px;
+                    left:0px;
+                    width:50%;
+                    height:100%;
+                    background:rgba(0,0,0,0.3);
+                    display:block;
+                    z-index:9;
+                }
+                #screen_03.pop:after{
+                    content:'';
+                    position:absolute;
+                    top:0px;
+                    right:0px;
+                    width:50%;
+                    height:100%;
+                    background:rgba(0,0,0,0.3);
+                    display:block;
+                    z-index:9;
+                }
+        </style>
+    </head>
+    <body>
+        <section class="section" id="main">
+            <div class="container items-center flex">
+                <div class="flex flex-col">
+                    <div class="flex items-center">
+                        <div class="col flex-col text-center">
+                            <h1 class="h-1 txt_black">Mapa Front-End Unicesumar</h1>
+                            <span class="lead txt_semiblack mt-1">Reinaldo José Nunes - RA 21027928-5</span>
+                            <span class="text-sm txt_semiblack mt-1">Abaixo estão apresentados os três rascunhos. Para testar as telas, clique no botão abaixo respectivo à tela de interesse.</span>
+                            <div class="btn-group mt-1">
+                                <button class="btn btn-primary btn-scroll" data-ref="#screen_01">TELA DE CADASTRO</button>
+                                <button class="btn btn-primary btn-scroll" data-ref="#screen_02">TELA DE LOGIN</button>
+                                <button class="btn btn-primary btn-scroll" data-ref="#screen_03">TELA DE RECUPERAÇÃO</button>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 flex-col">
+                            <h4 class="h-4">Rascunho 01 - Cadastro</h4>
+                            <form action="#" method="post" class="flex flex-col bg-draft">
+                                <fieldset class="flex flex-col">
+                                    <span class="lead text_semiblack mb-1">Cadastre-se</span>
+                                    <span class="text-sm text_semiblack mb-1">Para se cadastrar, preencha os campos abaixo corretamente.</span>
+                                </fieldset>
+
+                                <label class="label-draft">
+                                    <span>Nome:</span>
+                                    <input type="text" name="name" id="name" class="form-draft" placeholder="Nome completo" />
+                                </label>
+
+                                <label class="label-draft">
+                                    <span>E-mail:</span>
+                                    <input type="email" name="email" id="email" class="form-draft" placeholder="usuario@empresa.com.br" />
+                                </label>
+
+                                <label class="label-draft">
+                                    <span>Usuário:</span>
+                                    <input type="text" name="user" id="user" class="form-draft" placeholder="Usuário" />
+                                </label>
+
+                                <label class="label-draft">
+                                    <span>Senha:</span>
+                                    <input type="password" name="password" id="password" class="form-draft" placeholder="Ex: S3nh45!@" />
+                                </label>
+
+                                <input type="submit" value="CADASTRAR" class="btn-confirm mb-1" />
+
+                                <a href="#" class="text-sm text-center">Já sou cadastrado. Ir para login</a>
+                           </form>
+                        </div>
+
+                        <div class="col-4 flex-col">
+                            <h4 class="h-4">Rascunho 02 - Login</h4>
+                            <form action="#" method="post" class="flex flex-col bg-draft">
+                                <fieldset class="flex flex-col">
+                                    <span class="lead text_semiblack mb-1">Autentique-se</span>
+                                    <span class="text-sm text_semiblack mb-1">Para acessar o sistema, é necessário fazer o login.</span>
+                                </fieldset>
+
+                                <label class="label-draft">
+                                    <span>Usuário:</span>
+                                    <input type="text" name="user" id="user" class="form-draft" placeholder="Usuário" />
+                                </label>
+
+                                <label class="label-draft">
+                                    <span>Senha:</span>
+                                    <input type="password" name="password" id="password" class="form-draft" placeholder="Ex: S3nh45!@" />
+                                </label>
+
+                                <input type="submit" value="ENTRAR" class="btn-confirm mb-1" />
+
+                                <a href="#" class="text-sm text-center mb-1">Esqueci minha senha</a>
+                                <a href="#" class="text-sm text-center">Quero me cadastrar</a>
+                           </form>
+                        </div>
+
+                        <div class="col-4 flex-col">
+                            <h4 class="h-4">Rascunho 03 - Recuperar senha</h4>
+                            <form action="#" method="post" class="flex flex-col bg-draft">
+                                <fieldset class="flex flex-col">
+                                    <span class="lead text_semiblack mb-1">Recuperar senha</span>
+                                    <span class="text-sm text_semiblack mb-1">Para solicitar a recuperação de senha, informe o seu usuário e e-mail de registro para verificação.</span>
+                                </fieldset>
+
+                                <label class="label-draft">
+                                    <span>Usuário:</span>
+                                    <input type="text" name="user" id="user" class="form-draft" placeholder="Usuário" />
+                                </label>
+
+                                <label class="label-draft">
+                                    <span>E-mail:</span>
+                                    <input type="email" name="email" id="email" class="form-draft" placeholder="usuario@empresa.com.br" />
+                                </label>
+
+                                <input type="submit" value="RECUPERAR" class="btn-confirm mb-1" />
+
+                                <a href="#" class="text-sm text-center mb-1">Voltar para login</a>
+                           </form>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section id="screen_01" class="section bg-one no-padding flex-wrap">
+            <div class="col-6 items-center bgImage items-center">
+                <div class="content-data content-introduce">
+                    <h1 class="h-4 txt_white">Bem vindo de volta!</h1>
+                    <span class="text-sm txt_white mt-1 mb-1">Para acessar a sua conta, por favor efetue o seu login clicando no botão abaixo.</span>
+                    <button class="middle-align btn btn-secondary btn-scroll" data-ref="#screen_02">IR PARA O LOGIN</button>
+                </div>
+            </div>
+            <div class="col-6 items-center">
+                <div class="content-data flex-col flex w-full pd">
+                    <h6 class="h-4 txt_black text-center mb-1">Cadastre-se</h6>
+                    <p class="text-md txt_semiblack flex mb-1">Para acessar o nosso sistema, cadastre-se preenchendo os dados abaixo:</p>
+                    <form action="javascript:;" method="post" class="form-data mt-1">
+                        <label class="form-label">
+                            <span>Nome:</span>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Seu  nome" />
+                        </label>
+                        <label class="form-label">
+                            <span>E-mail:</span>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" />
+                        </label>
+                        <label class="form-label">
+                            <span>Usuário:</span>
+                            <input type="text" name="usuário" id="name" class="form-control" placeholder="Usuário" />
+                        </label>
+                        <label class="form-label">
+                            <span>Senha:</span>
+                            <input type="text" name="password" id="password" class="form-control" placeholder="Senha" />
+                        </label>
+
+                        <fieldset class="flex flex-col">
+                            <input type="submit" value="CADASTRAR" class="btn w-full text-center btn-primary mb-1" />
+                            <a href="javascript:;" class="link-assistent text-center btn-scroll" data-ref="#screen_02">Já sou cadastrado. Ir para login</a>
+                        </fieldset>
+                    </form>
+                    <br /><br /><br />
+                    <a href="javascript:;" class="link-assistent text-center btn-return">Voltar para home</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="screen_02" class="section bg-one no-padding flex-wrap">
+            <div class="col-6 items-center">
+                <div class="content-data flex-col flex w-full pd">
+                    <h6 class="h-4 txt_black text-center mb-1">Conectar</h6>
+                    <p class="text-md txt_semiblack flex mb-1">Para acessar o nosso sistema, faça o seu login abaixo:</p>
+                    <form action="javascript:;" method="post" class="form-data mt-1">
+                        <label class="form-label">
+                            <span>Usuário:</span>
+                            <input type="text" name="usuário" id="name" class="form-control" placeholder="Usuário" />
+                        </label>
+                        <label class="form-label">
+                            <span>Senha:</span>
+                            <input type="text" name="password" id="password" class="form-control" placeholder="Senha" />
+                        </label>
+
+                        <fieldset class="flex flex-col">
+                            <input type="submit" value="ACESSAR" class="btn w-full text-center btn-primary mb-1" />
+                            <a href="javascript:;" class="link-assistent text-center btn-scroll" data-ref="#screen_03">Não sei minha senha. Quero recuperar.</a>
+                        </fieldset>
+                    </form>
+                    <br /><br /><br />
+                    <a href="javascript:;" class="link-assistent text-center btn-return">Voltar para home</a>
+                </div>
+            </div>
+            <div class="col-6 items-center bgImage items-center">
+                <div class="content-data content-introduce">
+                    <h1 class="h-4 txt_white">Não é cliente?</h1>
+                    <span class="text-sm txt_white mt-1 mb-1">Não se preocupe. Clique no botão abaixo para efetuar o seu cadastro.</span>
+                    <button class="middle-align btn btn-secondary btn-scroll" data-ref="#screen_01">IR PARA CADASTRO</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="screen_03" class="section bg-one no-padding flex-wrap">
+            <div class="col-12 items-center">
+                <div class="content-data flex-col flex w-full pd " style="width:700px;margin:0 auto;">
+                    <h6 class="h-4 txt_black text-center mb-1">Recuperar conta</h6>
+                    <p class="text-md txt_semiblack flex mb-1 text-center">Não se preocupe. Após informar seu email de usuário abaixo, vamos enviar um link de recuperação.</p>
+                    <form action="javascript:;" method="post" class="form-data mt-1">
+                        <label class="form-label">
+                            <input type="mail" name="recovery" id="recovery" class="form-control" placeholder="Informe o seu e-mail de usuário" required />
+                        </label>
+
+                        <fieldset class="flex flex-col">
+                            <input type="submit" value="RECUPERAR" class="btn w-full text-center btn-primary mb-1" />
+                            <a href="javascript:;" class="link-assistent text-center btn-scroll" data-ref="#screen_02">Lembrei minha senha. Ir para login.</a>
+                        </fieldset>
+                    </form>
+                    <br /><br /><br />
+                    <a href="javascript:;" class="link-assistent text-center btn-return">Voltar para home</a>
+                </div>
+            </div>
+
+            <div class="alert-box items-center">
+                <div class="flex flex-col text-center"></div>
+                    <img src="https://icons-for-free.com/download-icon-complete+done+green+success+valid+icon-1320183462969251652_256.png" alt="Confirmação" title="Confirmação" width="74px" class="mb-1"/>
+                    <h6 class="h-4 mb-1 txt_semiblack">Concluído!</h6>
+                    <span class="txt_semiblack mb-1">Agora é só aguardar que em breve você recebera um link para recuperar sua conta.</span>
+                    <button class="btn btn-secondary close-pop">FECHAR</button>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+        <script>
+            $(".btn-scroll").click(function(){
+                let target = $(this).attr("data-ref");
+
+                if(target) document.querySelector(target).scrollIntoView({ behavior: 'smooth' }); 
+            });
+
+            $(".btn-return").click(function(){
+                document.querySelector("#main").scrollIntoView({ behavior: 'smooth' }); 
+            });
+
+            $("#screen_03 .btn-primary").click(function(){
+                var input = $("#recovery").val();
+                if(input != ""){
+                    $("#screen_03").addClass("pop");
+                    $(".alert-box").addClass("pop");
+                }
+            });
+
+            $(".close-pop").click(function(){
+                $("#screen_03").removeClass("pop");
+                $(".alert-box").removeClass("pop");
+            })
+        </script>
+    </body>
+</html>

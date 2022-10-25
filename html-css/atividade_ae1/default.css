@@ -1,0 +1,191 @@
+*{
+  margin: 0;
+    padding: 0;
+    border: 0;
+    font-size:1em;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    text-decoration:none;
+    outline: 0;
+    list-style:none;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  background:#eee;
+}
+
+/* RECURSIVOS */
+.wrapper{
+  margin:0 auto;
+  width:100%;
+  padding-left:1.5rem;
+  padding-right:1.5rem;
+  max-width:1400px;
+}
+.img-fluid{ width:100%;}
+
+
+
+/* CABEÇALHO */
+header{
+  background:#fff;
+  padding:32px;
+  margin-bottom:48px;
+  border-bottom-left-radius:30px;
+  border-bottom-right-radius:30px;
+  box-shadow: 0px 0px 100px 15px #ddd;
+}
+  header .logo{
+    margin:0 auto;
+    margin-bottom:22px;
+    max-width:400px;
+    padding:25px;
+  }
+
+/* RODAPÉ */  
+
+footer{
+  background:#222;
+  padding:64px 32px;
+  margin-top:48px;
+  box-shadow: 0px 0px 100px 15px #ddd;
+}
+
+footer span{
+  display:block;
+  line-height:130%;
+  text-align:center;
+  color:#fff;
+}
+footer span a{ color:rgb(0, 225, 255); }
+
+/* CONTEÚDO */
+.module-box{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:56px;
+}
+
+  .module-name{
+    padding:0px 12px;
+    font-size:25px;
+    font-weight:bold;
+    color:#555;
+    margin-bottom:18px;
+  }
+  
+    .modules-list{
+      width:100%;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+    }
+      .module-item{
+        display:flex;
+        width:33.33%;
+        margin-bottom:18px;
+        padding:12px;
+      }
+        .module-card{
+          flex:1;
+          border-radius:10px;
+          padding:32px;
+          display:flex;
+          flex-direction:column;
+          background:#fff;
+          overflow: hidden;
+
+          position:relative;
+        }
+          .module-card:before{
+            content:'';
+            position:absolute;
+            left:0px;
+            bottom:0px;
+            width:0%;
+            height:8px;
+            background:#0dcaf0;
+            display:flex;
+            opacity:0.3;
+
+            transition-duration:0.2s;
+            -o-transition-duration:0.2s;
+            -moz-transition-duration:0.2s;
+          }
+          .module-card:after{
+            content:'';
+            position:absolute;
+            right:0px;
+            bottom:0px;
+            width:0%;
+            height:8px;
+            background:#0dcaf0;
+            display:flex;
+            opacity:0.3;
+
+            transition-duration:0.2s;
+            -o-transition-duration:0.2s;
+            -moz-transition-duration:0.2s;
+          }
+          .module-card:hover:before,
+          .module-card:hover:after{ width:50%; }
+
+          .module-card > i{
+            font-size:46px;
+            margin-bottom:6px;
+            color:#0d6efd;
+            transition-duration:0.2s;
+            -o-transition-duration:0.2s;
+            -moz-transition-duration:0.2s;
+          }
+          .module-card h6{
+            color:#0d6efd;
+            margin-bottom:12px;
+            transition-duration:0.2s;
+            -o-transition-duration:0.2s;
+            -moz-transition-duration:0.2s;
+          }
+            .module-card:hover h6,
+            .module-card:hover > i{
+              color:#0dcaf0;
+            }
+            .badge-date{
+              border-radius:5px;
+              padding:5px 10px;
+              background:#ddd;
+              font-size:12px;
+              display:flex;
+              width:fit-content;
+              font-weight:bold;
+              color:#555;
+              margin-bottom:12px;
+            }
+            .module-description{ margin-bottom:12px; }
+
+            .badge-status{
+              font-size:10px;
+              padding:8px;
+              border-radius:5px;
+              width:fit-content;
+            }
+              .status-success{
+                background:#198754;
+                color:#fff;
+              }
+              .status-progress{
+                background:#fd7e14;
+                color:#fff;
+              }
+
+        @media screen and (max-width:980px){
+          .module-item{ width: 100%; text-align:center; }
+          .badge-date{ margin:0 auto;margin-bottom:12px;}
+          .badge-status{ margin:0 auto; }
+        }
