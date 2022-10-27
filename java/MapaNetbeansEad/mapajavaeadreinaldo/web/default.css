@@ -1,0 +1,61 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 27 de out. de 2022, 00:48:25
+    Author     : Reinaldo José Nunes - RA: 21027928-5
+*/
+
+    html, body{
+        height:100%;
+        background:#212529;
+        font-family: Roboto,sans-serif;
+    }
+    .text-green-neon{ color: #25d88d; }
+    .btn-send-neon{
+        font-size:1.2rem;
+        color:#fff;
+        background:#4b3b72;
+        border:1px solid #7a6c9e;
+        border-bottom:4px solid #7a6c9e;
+    }
+    .btn-send-neon:hover{
+        border:1px solid #03bd70;
+        border-bottom:4px solid #03bd70;
+        background:#119f64
+    }
+    .h-big{ font-size:4rem; font-weight:700; }
+    .lead-small{ font-size: 1.1rem; }
+    .bg-dark-view{
+        background:#1c1c26;
+        border-radius:10px;
+    }
+
+    .form-control{
+        padding:12px;
+        background:none;
+        color:#ffffcc;
+    }
+    
+    .text-fancy{ color:#ffffcc; }
+
+    #progress_bar{
+        width:0%;
+        height:10px;
+        display:block;
+        background:#7a6c9e;
+
+        border-bottom-left-radius:4px;
+        border-bottom-right-radius:4px;
+
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+
+        transition:all .6s;
+    }
+    #progress_bar.active{
+        width:100%;
+    }

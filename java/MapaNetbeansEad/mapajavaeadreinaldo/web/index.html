@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Cáculo KM Rodado - RA 21027928-5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href='./default.css' rel='stylesheet' type='text/css' />
+    </head>
+    <body>
+        <div class="container-fluid bg-dark p-2" style="height:100vh;">
+           <div class="container p-5">
+               <div class="d-flex flex-column text-center mb-3">
+                    <h1 class="h-big text-green-neon mb-3">CALCULO KM RODADO</h1>
+                    <span class="lead text-light">Calcule quanto custará a sua viagem ou deslocamento.</span>
+               </div>
+               <div class="mt-5 p-5 w-75 bg-dark-view position-relative overflow-hidden" style="margin:0 auto;">
+                   <aside id="progress_bar"></aside>
+                   
+                   <form action='./resultado' method='post'>
+                       <div class="row">
+                            <label for="model_car" class="col-6 mb-3">
+                                <span class="lead-small text-light">Modelo ou veículo</span>
+                                <input type="text" name="model_car" id="model_car" class="form-control mt-2">
+                            </label>    
+                            <label for="price_gas" class="col-6 mb-3">
+                                <span class="lead-small text-light">R$/Litro gasolina</span>
+                                <input type="text" name="price_gas" id="price_gas" class="form-control mt-2">
+                            </label>
+                           
+                           <label for="km_l" class="col-6 mb-3">
+                                <span class="lead-small text-light">Média KM/L</span>
+                                <input type="text" name="km_l" id="km_l" class="form-control mt-2">
+                            </label>    
+                            <label for="revision_10mkm" class="col-6 mb-3">
+                                <span class="lead-small text-light">Média revisão 10mil/km</span>
+                                <input type="text" name="revision_10mkm" id="revision_10mkm" class="form-control mt-2">
+                            </label>
+                           
+                           <label for="price_pneus" class="col-6 mb-3">
+                                <span class="lead-small text-light">R$ 4 pneus p/ 50mil/km</span>
+                                <input type="text" name="price_pneus" id="price_pneus" class="form-control mt-2">
+                            </label>
+                           
+                           <label class="col-6 mb-3 align-items-center text-center">
+                               <span class="text-warning d-flex mt-3">Obs: estima-se acréscimo de 15% no cálculo do km rodado por desgaste e desvalorização veicular.</span>
+                           </label>
+                           
+                           <div class="col-12 justify-content-center text-center mt-4">
+                               <button id="submitForm" class="btn btn-lg btn-send-neon px-5 py-2">Calcular</button>
+                           </div>
+                        </div>
+                   </form>
+               </div>
+           </div>
+        </div>
+        <script>
+            const form = document.querySelector("form");
+            const btnSend = document.querySelector("#submitForm");
+            const progressBar = document.querySelector("#progress_bar");
+            
+            btnSend.addEventListener('click',function(){
+                progressBar.classList.add('active');
+                btnSend.innerText = 'Processando...';
+                
+                form.addEventListener("submit", function(e){
+                    e.preventDefault();
+                });
+                
+                setTimeout(function(){
+                    form.submit();
+                },600);
+            });
+        </script>
+    </body>
+</html>
